@@ -1,0 +1,55 @@
+.page{
+    width: 100%;
+    height: auto;
+    position: relative;
+    color: #999;
+    padding: 50px 0;
+}
+.page-title{
+    padding: 10px 0;
+    font-size: 700%;
+}
+
+.page-title .err-number{
+    font-weight: 900;
+    padding: 5px;
+}
+
+.err{
+    text-transform: uppercase;
+}
+
+.err h1{
+    font-weight: 700;
+}
+
+.err-title{
+    text-transform: uppercase;
+}
+.err-title h1{
+    font-weight: 500;
+    letter-spacing: .2rem;
+}
+
+.err-desc{
+    text-transform: capitalize;
+}
+
+.page-link a{
+    text-decoration: none;
+    
+    background: #fff;
+    color: #999;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s linear;
+    padding: 10px;
+    border: 1px solid #999;
+    text-transform: capitalize;
+}
+
+.page-link a:hover{
+    border-radius: 10px;
+    color: #fff;
+    background: #999;
+}

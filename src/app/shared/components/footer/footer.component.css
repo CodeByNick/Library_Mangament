@@ -1,0 +1,19 @@
+.footer{
+    position: sticky;
+    bottom: 0%;
+    padding: 0%;
+    width: 100%;
+}
+
+.footer-copyright{
+    position: relative;
+    left: 50%;
+    top: 0%;
+    bottom: 0%;
+    transform: translate(-50%);
+}
+
+.footer-copyright a{
+    color: #fff;
+    text-decoration: none;
+}

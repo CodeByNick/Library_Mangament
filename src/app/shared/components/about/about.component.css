@@ -1,0 +1,12 @@
+.about-section{
+    margin: 20px!important;
+}
+p{
+    text-align: justify;
+    margin: 0;
+}
+p::first-letter{
+    font-size: 300%;
+    padding-right: 5px;
+    line-height: 1em;
+}

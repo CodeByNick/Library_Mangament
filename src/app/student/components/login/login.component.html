@@ -1,0 +1,97 @@
+<!-- <div class="container p-4">
+    <form>
+        <div class="row">
+            <div class="form-group col-md-12">
+              <label for="inputEmail4">Email</label>
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group col-md-12">
+              <label for="inputPassword4">Password</label>
+              <input type="password" class="form-control" placeholder="Password">
+            </div>
+            <a class="text-right" routerLink="/home/register">Forgot Passowrd?</a>
+        </div>
+        <div class="login text-center">
+            <button type="button" class="btn btn-outline-primary">Login</button>
+        </div>
+  </form>
+</div> -->
+
+
+
+  <!-- <div class="container loginForm">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="stud-logo" style="position: relative; left: 40%; background: #3f51b5; width: 80px; border-radius: 50%; margin: 0 0 10px 0;">
+            <i class="material-icons" style="font-size: 80px; color: #fff;">person</i>
+        </div>
+          
+
+        <div class="login-title">
+            <h2>Student Login</h2>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="example-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Enter your email">
+              </mat-form-field>
+  
+              <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="Enter your password">
+              </mat-form-field>
+              <p class="text-right"><a routerLink="/home/login"><small>Forgot Password?</small></a></p>
+        </div>
+        <button class="float-right px-3" mat-raised-button color="primary">Login</button>
+      </div>
+      
+    </div>
+  </div> -->
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>User Name</mat-card-title>
+    <mat-card-subtitle>Student / Librarian</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+      <div class="example-container">
+        <form [formGroup] = "loginForm">
+          <mat-form-field>
+              <mat-select placeholder="Login as">
+                <mat-option value="option">Student</mat-option>
+                <mat-option value="option">Librarian</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="User name" formControlName="email" required [ngModel] = "user">
+            <mat-icon matSuffix>person_outline</mat-icon>
+            <mat-error *ngFor="let validation of validationMessage.email">
+                <mat-error class="error-message" *ngIf="loginForm.get('email').hasError(validation.type) && (loginForm.get('email').dirty || loginForm.get('email').touched)">{{validation.message}}</mat-error>
+            </mat-error>
+          </mat-form-field>
+        
+          <mat-form-field>
+              <input matInput placeholder="Enter your password" formControlName="password" [type]="hide ? 'password' : 'text'" required [ngModel] = "pass">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngFor="let validation of validationMessage.password">
+                  <mat-error class="error-message" *ngIf="loginForm.get('password').hasError(validation.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">{{validation.message}}</mat-error>
+              </mat-error>
+            </mat-form-field>
+            
+            <a href=#>Forgot Password?</a>
+            <hr>
+            <mat-card-actions>
+              <button mat-button color="primary" (click) = "onClear()">Clear</button>
+              <button mat-raised-button color="primary" [disabled] = "!loginForm.valid" (click) = "onLogin(loginForm.value)" >Login</button>
+            </mat-card-actions>
+          </form>
+        </div>
+  </mat-card-content>
+</mat-card>

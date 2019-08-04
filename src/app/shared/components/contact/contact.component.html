@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="example-container">
+                <form [formGroup] = "contactForm" (ngSubmit) = "onSubmit(contactForm.value)">
+                    <mat-form-field>
+                        <input formControlName = "userName" matInput placeholder="User Name" required>
+                        <mat-error *ngFor="let validation of validationMessage.userName">
+                            <mat-error class="error-message" *ngIf="contactForm.get('userName').hasError(validation.type) && (contactForm.get('userName').dirty || contactForm.get('userName').touched)">{{validation.message}}</mat-error>
+                        </mat-error>
+                    </mat-form-field>
+
+                     <mat-form-field>
+                        <input matInput formControlName = "email" placeholder="Example: abc@xyz.com" required>
+                        <mat-error *ngFor="let validation of validationMessage.email">
+                            <mat-error class="error-message" *ngIf="contactForm.get('email').hasError(validation.type) && (contactForm.get('email').dirty || contactForm.get('email').touched)">{{validation.message}}</mat-error>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <textarea formControlName = "comment" matInput placeholder="Leave a comment..."></textarea>
+                        <mat-error *ngFor="let validation of validationMessage.comment">
+                            <mat-error class="error-message" *ngIf="contactForm.get('comment').hasError(validation.type) && (contactForm.get('comment').dirty || contactForm.get('comment').touched)">{{validation.message}}</mat-error>
+                        </mat-error>
+                    </mat-form-field>
+                    <button [disabled] = "!contactForm.valid" mat-raised-button color="primary">Send</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>  
+                        
+                  
+                    
+
+                    <!-- <form (ngSubmit) = "processForm()">
+                    <mat-form-field class="example-full-width">
+                        <textarea matInput placeholder="Leave a comment"></textarea>
+                    </mat-form-field> 
+                </form>-->
+                
+                
+        
