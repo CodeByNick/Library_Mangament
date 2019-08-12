@@ -16,7 +16,7 @@ export class AllBooksComponent implements AfterViewInit, OnInit {
   dataSource: AllBooksDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name', 'author', 'publisher', 'price'];
+  displayedColumns = ['id', 'name', 'author', 'issue_date', 'expire_date', 'return_date', 'action'];
 
   ngOnInit() {
     this.dataSource = new AllBooksDataSource();

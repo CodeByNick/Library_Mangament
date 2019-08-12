@@ -18,6 +18,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MyBooksComponent } from './components/my-books/my-books.component';
 import { AllBooksComponent } from './components/all-books/all-books.component';
+import { MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatBadgeModule, MatTabsModule } from '@angular/material';
 
 
 @NgModule({
@@ -29,6 +30,9 @@ import { AllBooksComponent } from './components/all-books/all-books.component';
     MatCardModule,
     MatMenuModule,
     MatIconModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatButtonModule,
     LayoutModule,
     MatToolbarModule,
@@ -36,7 +40,9 @@ import { AllBooksComponent } from './components/all-books/all-books.component';
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatBadgeModule,
+    MatTabsModule
   ]
 })
 export class StudentModule { }

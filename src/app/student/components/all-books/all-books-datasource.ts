@@ -7,24 +7,26 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 // TODO: Replace this with your own data model type
 export interface AllBooksItem {
   name: string;
-  price: number;
-  publisher:string;
+  return_date:string;
+  expire_date: string,
+  issue_date:string;
   author: string;
   id: number;
+  action:[string];
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: AllBooksItem[] = [
-  {id: 1, name: 'Wings of Fire', author:'Wings', publisher:'publisher1', price: 0.1},
-  {id: 2, name: 'Good Boy Bad Boy', author:'Good', publisher:'publisher2', price: 0.2},
-  {id: 3, name: 'Gravity', author:'Gravity', publisher:'publisher3', price: 0.3},
-  {id: 4, name: 'Rich Man Poor Man', author:'Rich', publisher:'publisher4', price: 0.4},
-  {id: 5, name: 'Monoglean', author:'Monoglean', publisher:'publisher5', price: 0.5},
-  {id: 6, name: 'Game of Thornes', author:'Game', publisher:'publisher6', price: 0.6},
-  {id: 7, name: 'Napolean', author:'Napolean', publisher:'publisher7', price: 0.7},
-  {id: 8, name: 'Age of Empire', author:'Age', publisher:'publisher8', price: 0.8},
-  {id: 9, name: 'Surya', author:'Surya', publisher:'publisher9', price: 0.9},
-  {id: 10, name: 'Yoga', author:'Yoga', publisher:'publisher10', price: 0.10}
+  {id: 1, name: 'Wings of Fire', author:'Wings', issue_date:'1', expire_date: '1', return_date:'1',action:['reply']},
+  {id: 2, name: 'Good Boy Bad Boy', author:'Good', issue_date:'2', expire_date: '2',return_date:'2',action:['reply']},
+  {id: 3, name: 'Gravity', author:'Gravity', issue_date:'3', expire_date: '3',return_date:'3',action:['reply']},
+  {id: 4, name: 'Rich Man Poor Man', author:'Rich', issue_date:'4', expire_date: '4',return_date:'4',action:['reply']},
+  {id: 5, name: 'Monoglean', author:'Monoglean', issue_date:'5', expire_date: '5',return_date:'5',action:['reply']},
+  {id: 6, name: 'Game of Thornes', author:'Game', issue_date:'6', expire_date: '6',return_date:'6',action:['reply']},
+  {id: 7, name: 'Napolean', author:'Napolean', issue_date:'7', expire_date: '7',return_date:'7',action:['reply']},
+  {id: 8, name: 'Age of Empire', author:'Age', issue_date:'8', expire_date: '8',return_date:'8',action:['reply']},
+  {id: 9, name: 'Surya', author:'Surya', issue_date:'9', expire_date: '9',return_date:'9',action:['reply']},
+  {id: 10, name: 'Yoga', author:'Yoga', issue_date:'10', expire_date: '10',return_date:'10',action:['reply']}
 ];
 
 /**
@@ -84,11 +86,14 @@ export class AllBooksDataSource extends DataSource<AllBooksItem> {
       return data;
     }
 
+
+    
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'price': return compare(a.name, b.name, isAsc);
-        case 'publisher': return compare(a.name, b.name, isAsc);
+        case 'action': return compare(null, null, isAsc);
+        case 'expire_date': return compare(a.name, b.name, isAsc);
+        case 'issue_date': return compare(a.name, b.name, isAsc);
         case 'author': return compare(a.name, b.name, isAsc);
         case 'name': return compare(a.name, b.name, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);

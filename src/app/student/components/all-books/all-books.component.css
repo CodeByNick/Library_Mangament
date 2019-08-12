@@ -5,3 +5,56 @@
 .full-width-table {
   width: 100%;
 }
+
+.actions{
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0px 5px;
+  border: 1px solid #623AAC;
+}
+
+.search-box{
+  float: right;
+  padding-right: 20px;
+}
+
+.mat-elevation-z8{
+  width: 100%;
+}
+
+.example-tab-icon {
+  margin-right: 8px;
+}
+
+.example-small-box, .example-large-box {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* margin: 16px; */
+  padding: 16px;
+  /* border-radius: 8px; */
+}
+.example-small-box {
+  /* height: 100%; */
+  width: 100%;
+}
+
+mat-icon{
+  color: #3F51B5;
+}
+
+.example-large-box {
+  /* height: 100%; */
+  width: 100%;
+}
+
+.act mat-icon{
+  background: transparent;
+  padding: 10px;
+  margin: 0 10px 0 0;
+}
+
+/* .search_option{
+  float: right;
+  width: 50%;
+} */

@@ -23,3 +23,62 @@
 mat-nav-list a:hover{
   background: #aaa;
 }
+
+mat-nav-list a{
+  color: #623AAC;
+}
+
+mat-toolbar{
+  color: #fff;
+  padding: 0 1rem;
+  background: #623AAC; 
+}
+
+mat-nav-list{
+  padding: 0;
+}
+
+mat-nav-list a i{
+  margin-right: 15px;
+}
+
+.stud_info{
+  background: #623AAC;
+  color: #fff;
+  opacity: 0.6;
+}
+
+
+.isAvctive{
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: green;
+}
+
+.stud_img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  left: 30%;
+  margin: 20px 0 0 0;
+}
+
+.profile{
+  bottom: 15px;
+    padding: 0 1rem;
+    position: relative;
+}
+mat-nav-list a:hover{
+  color: #fff;
+  transition: .6s;
+}
+
+
+mat-nav-list a:focus{
+  background: #D5527E;
+  color: #fff;
+  opacity: 1;
+}

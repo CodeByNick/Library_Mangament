@@ -1,4 +1,4 @@
-import { MatFormFieldModule} from '@angular/material';
+import { MatFormFieldModule, MatBadgeModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 
 import {
@@ -7,7 +7,7 @@ import {
 } from '@angular/material';
 
 @NgModule({
-  imports: [MatToolbarModule,MatButtonModule,MatCardModule,MatInputModule,MatFormFieldModule,MatDividerModule,MatDialogModule,MatTableModule,MatMenuModule,MatIconModule,MatProgressSpinnerModule,MatToolbarModule,MatIconModule,MatFormFieldModule,MatSelectModule,MatInputModule,MatTooltipModule],
-  exports: [MatToolbarModule,MatButtonModule,MatCardModule,MatInputModule,MatFormFieldModule,MatDividerModule,MatDialogModule,MatTableModule,MatMenuModule,MatIconModule,MatProgressSpinnerModule,MatToolbarModule,MatIconModule,MatFormFieldModule,MatSelectModule,MatInputModule,MatTooltipModule]
+  imports: [MatToolbarModule,MatButtonModule,MatCardModule,MatInputModule,MatFormFieldModule,MatDividerModule,MatDialogModule,MatTableModule,MatMenuModule,MatIconModule,MatProgressSpinnerModule,MatToolbarModule,MatIconModule,MatFormFieldModule,MatSelectModule,MatInputModule,MatTooltipModule,MatBadgeModule],
+  exports: [MatToolbarModule,MatButtonModule,MatCardModule,MatInputModule,MatFormFieldModule,MatDividerModule,MatDialogModule,MatTableModule,MatMenuModule,MatIconModule,MatProgressSpinnerModule,MatToolbarModule,MatIconModule,MatFormFieldModule,MatSelectModule,MatInputModule,MatTooltipModule,MatBadgeModule]
 })
 export class MaterialModule { }
